@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="./bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+    
+        :root {
+            --primary-blue: #0d6efd;
+            --hero-bg: #1a73e8;
+            --accent-yellow: #ffc107;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        /* 1. Header & Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(13, 110, 253, 0.85), rgba(13, 110, 253, 0.85)), 
+                        url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200') center/cover no-repeat;
+            color: white;
+            padding-bottom: 80px;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .btn-yellow {
+            background-color: var(--accent-yellow);
+            color: #000;
+            font-weight: 600;
+            border: none;
+        }
+        .btn-yellow:hover {
+            background-color: #e0a800;
+            color: #000;
+        }
+
+        /* 2. Dark Banner Section */
+        /* .dark-banner {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200') center/cover no-repeat;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        } */
+
+        /* 3. Stats Section */
+        .stats-section {
+            background-color: #0d6efd;
+            color: white;
+            padding: 40px 0;
+        }
+
+        /* 4. Accordion (FAQ) Customization */
+        .custom-accordion .accordion-button:not(.collapsed) {
+            background-color: #e7f1ff;
+            color: #0d6efd;
+            font-weight: bold;
+        }
+        
+        .custom-accordion .accordion-button {
+            font-weight: 600;
+        }
+
+        /* 5. Contact Section */
+        .contact-section {
+            background-color: #f8f9fa;
+        }
+
+        /* 6. Footer */
+        .footer-dark {
+            background-color: #12141d;
+            color: #a0a5b5;
+        }
+        .footer-dark a {
+            color: #a0a5b5;
+            text-decoration: none;
+        }
+        .footer-dark a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HERO & NAVBAR SECTION -->
+    <header class="hero-section">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent pt-3">
+            <div class="container">
+                <a class="navbar-brand text-white" href="#">UniTech Club</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50" href="#activities">Activities</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50" href="#faq">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container text-center text-white my-5 pt-4 pb-4">
+            <h1 class="fw-bold display-4 mb-3">Join Our University Club</h1>
+            <p class="lead mb-4 mx-auto" style="max-width: 650px;">
+                Discover new skills, collaborate on exciting technology projects, and connect with fellow students on campus.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#contact" class="btn btn-yellow px-4 py-2 rounded-2">Become a Member</a>
+                <a href="#activities" class="btn btn-light text-dark px-4 py-2 rounded-2 fw-semibold">Explore Activities</a>
+            </div>
+        </div>
+    </header>
+
+
+<section class="carousel-banner mt-4 container">
+    <div id="darkBannerCarousel" class="carousel slide" data-bs-ride="carousel">
+        
+        
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#darkBannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#darkBannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#darkBannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        
+        <div class="carousel-inner">
+            
+            <!-- Slide 1 -->
+            <div class="carousel-item active position-relative">
+                <img src="./imgs/WhatsApp Image 2026-08-16 at 2.43.04 PM (1).jpeg" class="d-block w-100" alt="Slide 1" style="height: 400px; object-fit: cover;">
+                <!-- Dark Overlay -->
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+                <!-- Content Text -->
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-end h-100 top-0 bottom-0">
+                    <h6 class="fw-bold fs-3 text-white mb-2">Campus Coding Sessions</h6>
+                    <p class="text-light mb-0">Join our weekly workshops held in the engineering building</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item position-relative">
+                <img src="./imgs/WhatsApp Image 2026-08-16 at 2.43.04 PM (3).jpeg" class="d-block w-100" alt="Slide 2" style="height: 400px; object-fit: cover;">
+                <!-- Dark Overlay -->
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+                <!-- Content Text -->
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-end h-100 top-0 bottom-0">
+                    <h6 class="fw-bold fs-3 text-white mb-2">Annual University Hackathon</h6>
+                    <p class="text-light mb-0">Compete with teams and build creative solutions in 24 hours</p>
+                </div>
+            </div>
+
+            
+            <div class="carousel-item position-relative">
+                <img src="./imgs/WhatsApp Image 2026-08-16 at 2.43.05 PM.jpeg" class="d-block w-100" alt="Slide 3" style="height: 400px; object-fit: cover;">
+                
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+                
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-end h-100 top-0 bottom-0">
+                    <h6 class="fw-bold fs-3 text-white mb-2">Tech Speaker Events</h6>
+                    <p class="text-light mb-0">Listen to insights from top tech leaders and software engineers</p>
+                </div>
+            </div>
+
+        </div>
+
+    
+        <button class="carousel-control-prev" type="button" data-bs-target="#darkBannerCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#darkBannerCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+</section>
+
+
+    
+    <section id="about" class="py-5">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="text-uppercase text-primary fw-bold small">Who We Are</span>
+                    <h2 class="fw-bold fs-1 mt-2 mb-3">Building a Community of Tech Enthusiasts</h2>
+                    <p class="text-muted">
+                        The UniTech Club is a student-run organization dedicated to fostering technical skills, innovation, and career development among students in all academic fields.
+                    </p>
+                    <p class="text-muted">
+                        Whether you're a beginner looking to write your first line of code or an advanced student looking to collaborate on real-world software projects, our club provides workshops, hackathons, and networking opportunities for everyone.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="./imgs/WhatsApp Image 2026-08-16 at 2.43.04 PM (2).jpeg" class="img-fluid rounded-3 shadow-sm" alt="Students collaborating">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ACTIVITIES SECTION (3 Cards) -->
+    <section id="activities" class="py-5 bg-light">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary">Club Activities</h2>
+                <p class="text-muted">Explore what we do throughout the academic semester</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-3">
+                        <img src="./imgs/WhatsApp Image 2026-08-16 at 2.43.04 PM (2).jpeg" class="card-img-top" alt="Coding Workshops" style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <span class="badge bg-primary mb-2">Weekly</span>
+                            <h5 class="card-title fw-bold">Coding Workshops</h5>
+                            <p class="card-text text-muted small">Hands-on sessions covering Web Dev, Python, AI, and cybersecurity fundamentals.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-3">
+                        <img src="./imgs/WhatsApp Image 2026-08-16 at 2.43.04 PM (2).jpeg" class="card-img-top" alt="Annual Hackathon" style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <span class="badge bg-danger mb-2">Major Event</span>
+                            <h5 class="card-title fw-bold">Annual Hackathon</h5>
+                            <p class="card-text text-muted small">24-hour coding challenge where students team up to build innovative solutions for prizes.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-3">
+                        <img src="./imgs/WhatsApp Image 2026-08-16 at 2.43.04 PM (2).jpeg" class="card-img-top" alt="Guest Speaker Series" style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success mb-2">Monthly</span>
+                            <h5 class="card-title fw-bold">Guest Speaker Series</h5>
+                            <p class="card-text text-muted small">Talks by technology industry professionals, alumni, and faculty sharing career insights.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. STATS STRIP SECTION -->
+    <section class="stats-section">
+        <div class="container text-center">
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <h2 class="display-4 fw-bold">150+</h2>
+                    <p class="mb-0 text-white-50">Active Members</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h2 class="display-4 fw-bold">10</h2>
+                    <p class="mb-0 text-white-50">Workshops / Year</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h2 class="display-4 fw-bold">5</h2>
+                    <p class="mb-0 text-white-50">Events Hosted</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FAQ SECTION (Accordion) -->
+    <section id="faq" class="py-5">
+        <div class="container py-4" style="max-width: 900px;">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary">Frequently Asked Questions</h2>
+                <p class="text-muted">Everything you need to know about joining the UniTech Club</p>
+            </div>
+
+            <div class="accordion custom-accordion shadow-sm" id="faqAccordion">
+                <!-- Question 1 (Open) -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Who can join UniTech Club?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            Membership is open to all currently enrolled university students across all majors. Whether you are a computer science student or simply interested in technology, you are welcome to join.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Is prior programming experience required?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            No prior experience is necessary! We host beginner workshops that start from the basics.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            How often does the club meet?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            We usually meet twice a week for workshops and group projects.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            Are there membership fees?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            Joining the club is completely free for all university students.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CONTACT SECTION -->
+    <section id="contact" class="py-5 contact-section">
+        <div class="container py-4" style="max-width: 800px;">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-primary">Get in Touch</h2>
+                <p class="text-muted">Have a question? Fill out the form below to send us a message.</p>
+            </div>
+
+            <div class="card border-0 shadow-sm p-4 rounded-3">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label text-muted small fw-semibold">Your Name</label>
+                        <input type="text" class="form-field form-control" placeholder="Your Name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted small fw-semibold">Email Address</label>
+                        <input type="email" class="form-field form-control" placeholder="Email Address">
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label text-muted small fw-semibold">Message</label>
+                        <textarea class="form-field form-control" rows="4" placeholder="message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER SECTION -->
+    <footer class="footer-dark py-4 border-top border-dark">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div>
+                    <h5 class="fw-bold text-white mb-1">UniTech Club</h5>
+                    <p class="small mb-0">&copy; 2026 UniTech Club. All rights reserved.</p>
+                </div>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item me-3"><a href="#home">Home</a></li>
+                    <li class="list-inline-item me-3"><a href="#about">About</a></li>
+                    <li class="list-inline-item me-3"><a href="#activities">Activities</a></li>
+                    <li class="list-inline-item me-3"><a href="#faq">FAQ</a></li>
+                    <li class="list-inline-item"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
